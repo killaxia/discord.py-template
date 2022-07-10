@@ -21,7 +21,7 @@ botid = []
 #async def something(ctx):
     #await ctx.send("something")
 
-for filename in os.listdir('FOLDER WHERE COGS ARE (/VAR/BOTS/COGS-G'):
+for filename in os.listdir('FOLDER WHERE COGS ARE (/VAR/BOTS/COGS-G)'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs-g.{filename[:-3]}')
         print(f"{filename} loaded!")
