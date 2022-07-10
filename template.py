@@ -10,16 +10,16 @@ import requests
 
 
 bot = Bot(command_prefix="-", intents=intents)
-token = 'OTk0MDU5NjU5MDI5NzkwNzIx.G-qRS0.eFdXvFK6KwHLCcdPJycUBb2RXUMN8W1vAbB_N0'
+token = 'TOKEN HERE'
 client = discord.Client(intents=intents)
 bot.remove_command("help")
 botid = []
 
 
 
-for filename in os.listdir('/var/bots/template/cogs'):
+for filename in os.listdir('FOLDER WHERE COGS ARE (/VAR/BOTS/COGS-G'):
     if filename.endswith('.py'):
-        bot.load_extension(f'cogs.{filename[:-3]}')
+        bot.load_extension(f'cogs-g.{filename[:-3]}')
         print(f"{filename} loaded!")
 
 
@@ -35,7 +35,7 @@ async def on_ready():
         members += guild.member_count - 1
     await bot.change_presence(activity=discord.Activity(
         type=discord.ActivityType.watching, name=f'{members} members'))
-    f = open("/var/bots/members.txt", "a")
+    f = open("FOLDER TO SAVE MEMBERS INFO TO, NUMBER OF USERS TOTAL", "a")
     f.write(str(members)+"\n")
     f.close()
 
