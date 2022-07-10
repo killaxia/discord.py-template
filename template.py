@@ -15,7 +15,11 @@ client = discord.Client(intents=intents)
 bot.remove_command("help")
 botid = []
 
+#do bot command stuff:
 
+#@bot.command()
+#async def something(ctx):
+    #await ctx.send("something")
 
 for filename in os.listdir('FOLDER WHERE COGS ARE (/VAR/BOTS/COGS-G'):
     if filename.endswith('.py'):
